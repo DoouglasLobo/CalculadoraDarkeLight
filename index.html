@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Para compatibilidade com o IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+    <title>Calculadora Moderna</title> <!-- Título da página -->
+</head>
+
+<body>
+    <div class="container"> <!-- Contêiner que centraliza a calculadora -->
+        <div class="calculadora dark"> <!-- Div principal da calculadora com classe 'dark' para tema escuro -->
+            <div class="theme-toggler active"> <!-- Botão para alternar tema -->
+                <i class="toggler-icon"></i> <!-- Ícone do botão de tema -->
+            </div>
+            <div class="display-screen"> <!-- Área de exibição da calculadora -->
+                <div id="display"></div> <!-- Div onde o resultado será exibido -->
+            </div>
+            <div class="buttons"> <!-- Contêiner para os botões da calculadora -->
+                <table> <!-- Tabela para organizar os botões -->
+                    <tr>
+                        <td><button class="btn-operator" id="clear">C</button></td> <!-- Botão de limpar -->
+                        <td><button class="btn-operator" id="/">&divide;</button></td> <!-- Botão de divisão -->
+                        <td><button class="btn-operator" id="*">&times;</button></td> <!-- Botão de multiplicação -->
+                        <td><button class="btn-operator" id="backspace"></button></td> <!-- Botão de retroceder -->
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="7">7</button></td> <!-- Botão número 7 -->
+                        <td><button class="btn-number" id="8">8</button></td> <!-- Botão número 8 -->
+                        <td><button class="btn-number" id="9">9</button></td> <!-- Botão número 9 -->
+                        <td><button class="btn-operator" id="-">-</button></td> <!-- Botão de subtração -->
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="4">4</button></td> <!-- Botão número 4 -->
+                        <td><button class="btn-number" id="5">5</button></td> <!-- Botão número 5 -->
+                        <td><button class="btn-number" id="6">6</button></td> <!-- Botão número 6 -->
+                        <td><button class="btn-operator" id="+">+</button></td> <!-- Botão de adição -->
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" id="1">1</button></td> <!-- Botão número 1 -->
+                        <td><button class="btn-number" id="2">2</button></td> <!-- Botão número 2 -->
+                        <td><button class="btn-number" id="3">3</button></td> <!-- Botão número 3 -->
+                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td> <!-- Botão de igual -->
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" id="(">(</button></td> <!-- Botão de parênteses aberto -->
+                        <td><button class="btn-number" id="0">0</button></td> <!-- Botão número 0 -->
+                        <td><button class="btn-operator" id=")">)</button></td> <!-- Botão de parênteses fechado -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+
+</html>

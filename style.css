@@ -1,0 +1,271 @@
+/* Reseta estilos padrão para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Inclui padding e border no cálculo da largura e altura */
+    outline: 0;
+    /* Remove o contorno padrão */
+    transition: all 0.5s ease;
+    /* Adiciona transição suave para todas as propriedades */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: sans-serif;
+    /* Define a fonte padrão */
+}
+
+/* Estilo dos links */
+a {
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    color: #fff;
+    /* Define a cor do texto como branca */
+}
+
+/* Fundo do corpo com um gradiente */
+body {
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 166));
+    /* Gradiente de cores */
+}
+
+/* Container centraliza a calculadora na tela */
+.container {
+    height: 100vh;
+    /* Altura total da janela de visualização */
+    max-width: 100vw;
+    /* Largura máxima da janela */
+    display: grid;
+    /* Usa grid para layout */
+    place-items: center;
+    /* Centraliza os itens no grid */
+}
+
+/* Estilo da calculadora */
+.calculadora {
+    position: relative;
+    /* Permite posicionamento absoluto de elementos filhos */
+    height: auto;
+    /* Altura automática */
+    width: auto;
+    /* Largura automática */
+    padding: 20px;
+    /* Espaçamento interno */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 30px #000;
+    /* Sombra ao redor da calculadora */
+    display: flex;
+    /* Usando flexbox para layout */
+    flex-direction: column;
+    /* Alinha itens em coluna */
+    align-items: flex-end;
+    /* Alinha os itens à direita */
+}
+
+/* Estilo do botão de alternância de tema */
+.theme-toggler {
+    position: absolute;
+    /* Permite que o botão seja posicionado livremente dentro da calculadora */
+    top: 30px;
+    /* Distância do topo */
+    right: 30px;
+    /* Distância da direita */
+    color: #fff;
+    /* Cor do texto do botão */
+    cursor: pointer;
+    /* Indica que é clicável */
+    z-index: 1;
+    /* Garantia de que o botão fique acima de outros elementos */
+}
+
+/* Estilo quando o botão de tema está ativo */
+.theme-toggler.active {
+    color: #333;
+    /* Cor do texto quando ativo */
+}
+
+/* Estilo do pseudo-elemento quando o botão está ativo */
+.theme-toggler.active::before {
+    background-color: #fff;
+    /* Cor do fundo do círculo quando ativo */
+}
+
+/* Estilo do pseudo-elemento antes do botão */
+.theme-toggler::before {
+    content: '';
+    /* Necessário para criar o elemento */
+    height: 30px;
+    /* Altura do círculo */
+    width: 30px;
+    /* Largura do círculo */
+    position: absolute;
+    /* Permite posicionar livremente */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translate(-50%, -50%);
+    /* Centraliza o círculo */
+    border-radius: 50%;
+    /* Torna-o redondo */
+    background-color: #333;
+    /* Cor do fundo do círculo */
+    z-index: -1;
+    /* Coloca atrás do texto do botão */
+}
+
+/* Estilo do display da calculadora */
+#display {
+    margin: 0 10px;
+    /* Margens laterais */
+    height: 150px;
+    /* Altura do display */
+    width: auto;
+    /* Largura automática */
+    max-width: 270px;
+    /* Largura máxima */
+    display: flex;
+    /* Usando flexbox para alinhamento */
+    align-items: flex-end;
+    /* Alinha os itens na parte inferior */
+    justify-content: flex-end;
+    /* Alinha os itens à direita */
+    font-size: 30px;
+    /* Tamanho da fonte */
+    margin-bottom: 20px;
+    /* Margem inferior */
+    overflow-x: scroll;
+    /* Permite rolagem horizontal se necessário */
+}
+
+/* Estilo do scrollbar do display */
+#display::-webkit-scrollbar {
+    display: block;
+    /* Exibe o scrollbar */
+    height: 3px;
+    /* Altura do scrollbar */
+}
+
+/* Estilo dos botões */
+button {
+    height: 60px;
+    /* Altura do botão */
+    width: 60px;
+    /* Largura do botão */
+    border: 0;
+    /* Remove bordas padrão */
+    border-radius: 30px;
+    /* Bordas arredondadas */
+    margin: 5px;
+    /* Margem entre os botões */
+    font-size: 20px;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Indica que é clicável */
+    transition: all 200ms ease;
+    /* Transição suave para alterações */
+}
+
+/* Efeito de hover para os botões */
+button:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+/* Estilo do botão de igual */
+button#equal {
+    height: 130px;
+    /* Altura aumentada para o botão de igual */
+}
+
+/* Tema Light */
+
+/* Estilo de fundo da calculadora no tema claro */
+.calculadora {
+    background-color: #fff;
+    /* Cor de fundo */
+}
+
+/* Estilo do display no tema claro */
+.calculadora #display {
+    color: #0a1e23;
+    /* Cor do texto */
+}
+
+/* Estilo do botão de limpar no tema claro */
+.calculadora button#clear {
+    background-color: #ffd5d8;
+    /* Cor de fundo do botão */
+    color: #fc4552;
+    /* Cor do texto */
+}
+
+/* Estilo dos botões numéricos no tema claro */
+.calculadora button.btn-number {
+    background-color: #c3eaff;
+    /* Cor de fundo dos botões numéricos */
+    color: #000;
+    /* Cor do texto */
+}
+
+/* Estilo dos botões operadores no tema claro */
+.calculadora button.btn-operator {
+    background-color: #ffd0df;
+    /* Cor de fundo dos botões operadores */
+    color: #f967f3;
+    /* Cor do texto */
+}
+
+/* Estilo do botão de igual no tema claro */
+.calculadora button.brn-equal {
+    background-color: #adf9e7;
+    /* Cor de fundo do botão de igual */
+    color: #000;
+    /* Cor do texto */
+}
+
+/* Tema Dark */
+
+/* Estilo de fundo da calculadora no tema escuro */
+.calculadora.dark {
+    background-color: #071115;
+    /* Cor de fundo escura */
+}
+
+/* Estilo do display no tema escuro */
+.calculadora.dark #display {
+    color: #f8fafd;
+    /* Cor do texto */
+}
+
+/* Estilo do botão de limpar no tema escuro */
+.calculadora.dark button#clear {
+    background-color: #2d191e;
+    /* Cor de fundo do botão */
+    color: #bd3740;
+    /* Cor do texto */
+}
+
+/* Estilo dos botões numéricos no tema escuro */
+.calculadora.dark button.btn-number {
+    background-color: #1b2f38;
+    /* Cor de fundo dos botões numéricos */
+    color: #f8fafb;
+    /* Cor do texto */
+}
+
+/* Estilo dos botões operadores no tema escuro */
+.calculadora.dark button.btn-operator {
+    background-color: #2e1f39;
+    /* Cor de fundo dos botões operadores */
+    color: #aa00a4;
+    /* Cor do texto */
+}
+
+/* Estilo do botão de igual no tema escuro */
+.calculadora.dark button.btn-equal {
+    background-color: #223323;
+    /* Cor de fundo do botão de igual */
+    color: #ffffff;
+    /* Cor do texto */
+}
